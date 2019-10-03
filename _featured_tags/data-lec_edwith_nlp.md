@@ -4,5 +4,5 @@ title: lec)edwith_nlp
 slug:  edwithnlp
 category: data
 menu: false
-order: 15
+order: 13
 ---
