@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
 title: lec)edwith_nlp
-slug:  edwithnlp
+slug:  lecedwithnlp
 category: data
 menu: false
 order: 13
