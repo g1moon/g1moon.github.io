@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Dilated Convolution "
-subtitle: "Dilated Convolution "
-categories: dl
-tags: lecedwithnlp
+title: "D. Neural Language Models"
+subtitle: "Neural Language Models"
+categories: data
+tags: dl
 comments: true
 ---
 # Dilated Convolution 
