@@ -571,3 +571,43 @@ footer {
   padding-left: 2px;
   padding-right: 3px;
 }
+
+/* ---- Sidebar: header + footer를 한 고정 컬럼으로 묶어 겹침 방지 ---- */
+.sidebar {
+  position: fixed;
+  top: 50px;            /* body padding 과 동일 */
+  bottom: 16px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;     /* 극단적으로 확대하면 사이드바만 스크롤 */
+  overflow-x: hidden;
+  scrollbar-width: none; /* 스크롤바는 숨기고 휠 스크롤만 */
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+.sidebar header,
+.sidebar footer {
+  position: static;
+  float: none;
+  width: auto;
+  bottom: auto;
+}
+.sidebar footer {
+  margin-top: auto;     /* 공간이 남으면 바닥으로, 없으면 header 바로 아래로 */
+  padding-top: 30px;    /* 쌓일 때 LinkedIn 과의 최소 간격 */
+}
+@media print, screen and (max-width: 960px) {
+  /* 세로 배치: header → section → footer 순서로 되돌림 */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .sidebar {
+    display: contents;
+  }
+  .sidebar header  { order: 0; }
+  section          { order: 1; }
+  .sidebar footer  { order: 2; margin-top: 0; padding-top: 0; }
+}
