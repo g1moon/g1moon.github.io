@@ -611,3 +611,18 @@ footer {
   section          { order: 1; }
   .sidebar footer  { order: 2; margin-top: 0; padding-top: 0; }
 }
+
+/* ---- Publications: [n] 번호 (최신이 큰 번호, <ol reversed>) ---- */
+ol.pubs {
+  padding-left: 2.6em;
+  margin: 0 0 6px 0;
+}
+ol.pubs li {
+  margin-bottom: 14px;
+  padding-left: 0.2em;
+}
+ol.pubs li::marker {
+  content: "[" counter(list-item) "]\00a0 ";
+  color: #494949;
+}
+p.pubs-note { margin-top: 0; }
