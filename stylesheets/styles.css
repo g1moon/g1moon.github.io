@@ -612,23 +612,3 @@ footer {
   .sidebar footer  { order: 2; margin-top: 0; padding-top: 0; }
 }
 
-/* ---- Publications: [n] 번호 (최신이 큰 번호). 시작값은 index.html 의 counter-reset ---- */
-ol.pubs {
-  list-style: none;
-  padding-left: 2.6em;
-  margin: 0 0 6px 0;
-}
-ol.pubs li {
-  counter-increment: pub -1;
-  position: relative;
-  margin-bottom: 14px;
-}
-ol.pubs li::before {
-  content: "[" counter(pub) "]";
-  position: absolute;
-  left: -2.6em;
-  width: 2.2em;
-  text-align: right;
-  color: #494949;
-}
-p.pubs-note { margin-top: 0; }
